@@ -1,21 +1,23 @@
-# 👋 Hi, I'm Viacheslav Bochkarev
+# Hi, I'm Viacheslav Bochkarev 👋
 
-Founder of **ViBo** — a memory layer for AI agents + living document archive.
+I build **ViBo** — memory that makes AI agents actually remember, and tools that keep them honest.
 
-## What I build
+## 🧠 ViBo ecosystem
 
-| Product | What it does |
-|---|---|
-| **ViBo Memory** | persistent memory for agents · 50–150× fewer tokens · L1/L2/L3 encryption |
-| **ViBo Archive** | living archive (`.vibo`) · 84% smaller · semantic search in ms |
-| **MCP server** | `npx @vibo-dev/vibo-mcp` — memory for Claude, Cursor, Windsurf, Codex |
-| **n8n node** | memory node for n8n workflows |
-| **Dify plugin** | memory tools for Dify agents |
+| Project | What it is | Grade |
+|---|---|---|
+| [**ViBo-memory**](https://github.com/vnbochkarev-netizen/ViBo-memory) | Persistent memory for AI agents: semantic search, L1/L2/L3 encryption, 50-150× token savings | A |
+| [**ViBo-SkillQA**](https://github.com/vnbochkarev-netizen/ViBo-SkillQA) | Test & certify agent skills: 7 automated checks, grade A-D, CI-ready | A |
+| [**memory-shield**](https://github.com/vnbochkarev-netizen/memory-shield) | Poisoning defense for agent memory: snapshots, quarantine, masked secrets (MIT, zero deps) | A |
+| [**ViBo-selfdeed**](https://github.com/vnbochkarev-netizen/ViBo-selfdeed) | Autonomous mission skill: grill → plan → execute → learn | — |
 
-## Links
+## 🛠 What I work on
+- Agent memory & context compression
+- Skill certification & QA automation
+- Prompt-injection defense
+- Agent orchestration & autonomous workflows
 
-🌐 [wwwvibo.com](https://wwwvibo.com) · 💬 [@ViBomemorybot](https://t.me/ViBomemorybot) · 📦 [n8n-nodes-vibo](https://www.npmjs.com/package/n8n-nodes-vibo)
-
-## Stack
-
-Python · TypeScript · semantic search · AES-256-GCM · MCP · LLM
+## 📫 Contact
+- Web: https://wwwvibo.com
+- Telegram: [@ViBomemorybot](https://t.me/ViBomemorybot)
+- Email: hello@wwwvibo.com
