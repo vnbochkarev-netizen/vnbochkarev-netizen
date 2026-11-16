@@ -1,35 +1,51 @@
-# Hi, I'm Viacheslav Bochkarev 👋
+# Viacheslav Bochkarev — building ViBo, memory for AI agents
 
-I build **ViBo** — memory that makes AI agents actually remember, and tools that keep them honest.
+Agents lose useful context between sessions, and searching the web can consume a large share of their tokens.  
+ViBo helps AI agents retain and retrieve context, with layered memory and compressed web search.  
+It’s for developers building agents and workflows with Python or MCP.
 
-## 🗄 Free and open source (start here)
+**A simple handoff**
+1. An agent finishes a session.
+2. It saves useful context to persistent memory.
+3. In the next session, it recalls that context and continues.
 
-| Project | What it is |
-|---|---|
-| [**CloudArc**](https://github.com/vnbochkarev-netizen/cloudarc) | Pack a 10 GiB folder into one `.vibo` archive at a **flat ~26 MiB peak RSS** (25.9 MiB pack / 31.2 MiB unpack, 1→10 GiB), and read its index over HTTP range requests without fetching the payload. Apache-2.0 · [docs site](https://vnbochkarev-netizen.github.io/cloudarc/) |
-| [**memory-shield**](https://github.com/vnbochkarev-netizen/memory-shield) | Poisoning defense for agent memory: snapshots, quarantine, masked secrets (MIT, zero deps) |
-| [**context-compactor**](https://github.com/vnbochkarev-netizen/context-compactor) | Condense long agent sessions into handoff memory |
-| [**skill-injection-scanner**](https://github.com/vnbochkarev-netizen/skill-injection-scanner) | Find hidden instructions and prompt-injection in agent skills |
-| [**cloudarc-bounded-memory-benchmark**](https://github.com/vnbochkarev-netizen/cloudarc-bounded-memory-benchmark) | The benchmark harness and CI gates behind CloudArc's numbers |
+## Start here
 
-## 🧠 ViBo ecosystem
+- **Python:** [ViBo-memory](https://github.com/vnbochkarev-netizen/ViBo-memory) — `pip install vibo-memory`
+- **MCP:** [vibo-mcp](https://github.com/vnbochkarev-netizen/vibo-mcp) — `npx @vibo-dev/vibo-mcp`
 
-| Project | What it is | Grade |
+## Ecosystem
+
+| Project | What it does | Status |
 |---|---|---|
-| [**ViBo-memory**](https://github.com/vnbochkarev-netizen/ViBo-memory) | Persistent memory for AI agents: semantic search, L1/L2/L3 encryption, 50-150× token savings | A |
-| [**ViBo-SkillQA**](https://github.com/vnbochkarev-netizen/ViBo-SkillQA) | Test & certify agent skills: 7 automated checks, grade A-D, CI-ready | A |
-| [**vibo-mcp**](https://github.com/vnbochkarev-netizen/vibo-mcp) | Memory for any MCP agent — one line: `npx @vibo/mcp` | — |
-| [**n8n-nodes-vibo**](https://github.com/vnbochkarev-netizen/n8n-nodes-vibo) | ViBo memory node for n8n workflows | — |
-| [**haystack-vibo**](https://github.com/vnbochkarev-netizen/haystack-vibo) | Persistent memory + token savings for Haystack pipelines | — |
-| [**ViBo-selfdeed**](https://github.com/vnbochkarev-netizen/ViBo-selfdeed) | Autonomous mission skill: grill → plan → execute → learn | — |
+| [ViBo-memory](https://github.com/vnbochkarev-netizen/ViBo-memory) | Persistent L1/L2/L3 memory and web search compression for AI agents | beta |
+| [vibo-mcp](https://github.com/vnbochkarev-netizen/vibo-mcp) | Memory for MCP agents | beta |
+| [ViBo-SkillQA](https://github.com/vnbochkarev-netizen/ViBo-SkillQA) | QA and certification for AI agent skills | experimental |
+| [vibo-memory-protocol](https://github.com/vnbochkarev-netizen/vibo-memory-protocol) | Layered agent memory with recall, verification, and secret pointers | experimental |
+| [vibo-skills](https://github.com/vnbochkarev-netizen/vibo-skills) | ViBo agent skills as `SKILL.md` definitions | experimental |
+| [vibocode-mcp](https://github.com/vnbochkarev-netizen/vibocode-mcp) | MCP tools for endpoint search and sandboxed Python execution | experimental |
+| [skill-injection-scanner](https://github.com/vnbochkarev-netizen/skill-injection-scanner) | Finds hidden instructions and prompt injection in agent skill files | experimental |
+| [cloudarc](https://github.com/vnbochkarev-netizen/cloudarc) | Packs folders into `.vibo` archives with bounded memory use | experimental |
+| [cloudarc-bounded-memory-benchmark](https://github.com/vnbochkarev-netizen/cloudarc-bounded-memory-benchmark) | Benchmark harness and CI gates for CloudArc | experimental |
+| [context-compactor](https://github.com/vnbochkarev-netizen/context-compactor) | Condenses long agent sessions into handoff memos | experimental |
+| [memory-shield](https://github.com/vnbochkarev-netizen/memory-shield) | Snapshots, scans, and audits agent memory | experimental |
+| [haystack-vibo](https://github.com/vnbochkarev-netizen/haystack-vibo) | Persistent memory for Haystack pipelines | experimental |
+| [n8n-nodes-vibo](https://github.com/vnbochkarev-netizen/n8n-nodes-vibo) | ViBo memory node for n8n | experimental |
+| [vibo-selfdeed](https://github.com/vnbochkarev-netizen/vibo-selfdeed) | GRILL and MISSION for autonomous agents | experimental |
 
-## 🛠 What I work on
-- Bounded-memory storage and large-archive tooling
-- Agent memory & context compression
-- Skill certification & QA automation
-- Prompt-injection defense, agent orchestration
+## Tools, not just memory
 
-## 📫 Contact
-- Web: https://wwwvibo.com
-- Telegram: [@ViBomemorybot](https://t.me/ViBomemorybot)
-- Email: hello@wwwvibo.com
+- [memory-shield](https://github.com/vnbochkarev-netizen/memory-shield) — snapshot, poison-scan, and audit agent memory.
+- [context-compactor](https://github.com/vnbochkarev-netizen/context-compactor) — turn long sessions into handoff memos.
+- [skill-injection-scanner](https://github.com/vnbochkarev-netizen/skill-injection-scanner) — inspect agent skill files for hidden instructions and prompt injection.
+- [cloudarc](https://github.com/vnbochkarev-netizen/cloudarc) — pack folders into `.vibo` archives.
+
+## Links
+
+- [Website](https://wwwvibo.com)
+- [Setup](https://wwwvibo.com/setup/)
+- [PyPI: vibo-memory](https://pypi.org/project/vibo-memory/)
+
+## Feedback
+
+Open an issue in the relevant public repository to share feedback or report a problem.
